@@ -4,7 +4,7 @@ if (isset($block['data']['preview_image_help'])): ?>
     <?php
 else: ?>
 <?php
-$image1 = get_field('image');
+$image1 = get_field('image-bg');
 $image1_url = isset($image1['url']) ? esc_url($image1['url']) : '';
 $image1_alt = isset($image1['alt']) ? esc_attr($image1['alt']) : '';
 ?>
@@ -72,9 +72,9 @@ $image1_alt = isset($image1['alt']) ? esc_attr($image1['alt']) : '';
                 </div>
             </div>
         </div>
-        <?php if (get_field('image')): ?> 
+        <?php if (get_field('image-bg')): ?> 
             <div class="absolute top-0 left-0 right-0 bottom-0 z-[5]">
-                <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" class="h-full min-h-full min-w-full object-cover">
+                <img src="<?php echo $image1_url; ?>" alt="<?php echo $image1_alt; ?>" class="h-full min-h-full min-w-full object-cover">
             </div>
         <?php endif; ?>
     </div>

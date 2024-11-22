@@ -26,7 +26,7 @@
         {
             "key": "field_6740636a39c58",
             "label": "Image",
-            "name": "image",
+            "name": "image-bg",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -399,5 +399,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1732273024
+    "modified": 1732273931
 }
