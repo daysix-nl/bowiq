@@ -1,0 +1,27 @@
+{
+  "name": "acf-contact",
+  "title": "Contact",
+  "description": "",
+  "category": "bibliotheek",
+  "icon": "admin-site-alt3",
+  "keywords": [
+    "block"
+  ],
+  "supports": {
+    "mode": false,
+    "jsx": true
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "acf-contact.php"
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "preview_image_help": "/wp-content/themes/bowiq/img/preview-images/leeg.jpeg",
+        "is_preview": true
+      }
+    }
+  }
+}

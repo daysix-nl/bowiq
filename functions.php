@@ -384,44 +384,44 @@ add_action('admin_menu', 'customize_dashboard_menu');
 |
 */
 
-function add_custom_admin_bar_styles() {
-    // Controleren of de gebruiker is ingelogd
-    if (is_user_logged_in()) {
-        // Gebruiker met de gebruikersnaam "xxx" uitsluiten
-        $user = wp_get_current_user();
-        if ($user->user_login === 'xxx') {
-            return;
-        }
+// function add_custom_admin_bar_styles() {
+//     // Controleren of de gebruiker is ingelogd
+//     if (is_user_logged_in()) {
+//         // Gebruiker met de gebruikersnaam "xxx" uitsluiten
+//         $user = wp_get_current_user();
+//         if ($user->user_login === 'xxx') {
+//             return;
+//         }
 
-        // Voeg hier de CSS-styling toe voor de menu-items die je wilt aanpassen
-        $custom_styles = "
-            #wp-admin-bar-comments { display: none !important; }
-            #wp-admin-bar-customize { display: none !important; }
-            #wp-admin-bar-new-content { display: none !important; }
-            #wp-admin-bar-rank-math { display: none !important; }
-            #dashboard_primary { display: none !important; }
-            #dashboard_quick_press { display: none !important; }
-            #dashboard_activity  { display: none !important; }
-            #welcome-panel { display: none !important; }
-            #dashboard_site_health { display: none !important; }
-            #rg_forms_dashboard { display: none !important; }
-            // #menu-posts { display: none !important; }
-            #menu-comments { display: none !important; }
-            #wc_admin_dashboard_setup { display: none !important; }
-            #rank_math_dashboard_widget { display: none !important; }
-            #toplevel_page_getwooplugins { display: none !important; }
-            #wp-admin-bar-weglot { display: none !important; }
-            #toplevel_page_weglot-settings { display: none !important; }
-            /* Voeg hier meer CSS-styling toe indien nodig */
-        ";
+//         // Voeg hier de CSS-styling toe voor de menu-items die je wilt aanpassen
+//         $custom_styles = "
+//             #wp-admin-bar-comments { display: none !important; }
+//             #wp-admin-bar-customize { display: none !important; }
+//             #wp-admin-bar-new-content { display: none !important; }
+//             #wp-admin-bar-rank-math { display: none !important; }
+//             #dashboard_primary { display: none !important; }
+//             #dashboard_quick_press { display: none !important; }
+//             #dashboard_activity  { display: none !important; }
+//             #welcome-panel { display: none !important; }
+//             #dashboard_site_health { display: none !important; }
+//             #rg_forms_dashboard { display: none !important; }
+//             // #menu-posts { display: none !important; }
+//             #menu-comments { display: none !important; }
+//             #wc_admin_dashboard_setup { display: none !important; }
+//             #rank_math_dashboard_widget { display: none !important; }
+//             #toplevel_page_getwooplugins { display: none !important; }
+//             #wp-admin-bar-weglot { display: none !important; }
+//             #toplevel_page_weglot-settings { display: none !important; }
+//             /* Voeg hier meer CSS-styling toe indien nodig */
+//         ";
 
-        // Voeg de CSS-styling toe aan zowel de front-end als het WordPress-dashboard
-        echo '<style type="text/css">' . $custom_styles . '</style>';
-        echo '<style type="text/css" id="custom-admin-bar-styles">' . $custom_styles . '</style>';
-    }
-}
-add_action('wp_head', 'add_custom_admin_bar_styles');
-add_action('admin_head', 'add_custom_admin_bar_styles');
+//         // Voeg de CSS-styling toe aan zowel de front-end als het WordPress-dashboard
+//         echo '<style type="text/css">' . $custom_styles . '</style>';
+//         echo '<style type="text/css" id="custom-admin-bar-styles">' . $custom_styles . '</style>';
+//     }
+// }
+// add_action('wp_head', 'add_custom_admin_bar_styles');
+// add_action('admin_head', 'add_custom_admin_bar_styles');
 
 
 
@@ -436,11 +436,11 @@ add_action('admin_head', 'add_custom_admin_bar_styles');
 */
 
 
-function vervang_dashboard_footer_tekst() {
-    echo 'Bedrijsnaam';
-}
+// function vervang_dashboard_footer_tekst() {
+//     echo 'Bedrijsnaam';
+// }
 
-add_filter('admin_footer_text', 'vervang_dashboard_footer_tekst');
+// add_filter('admin_footer_text', 'vervang_dashboard_footer_tekst');
 
 
 
@@ -454,14 +454,14 @@ add_filter('admin_footer_text', 'vervang_dashboard_footer_tekst');
 |
 */
 
-// Functie voor het doorverwijzen van "/backend" naar "/wp-login.php"
-function redirect_backend_to_wp_login() {
-    if ($_SERVER['REQUEST_URI'] == '/backend') {
-        wp_redirect(wp_login_url());
-        exit;
-    }
-}
-add_action('init', 'redirect_backend_to_wp_login');
+// // Functie voor het doorverwijzen van "/backend" naar "/wp-login.php"
+// function redirect_backend_to_wp_login() {
+//     if ($_SERVER['REQUEST_URI'] == '/backend') {
+//         wp_redirect(wp_login_url());
+//         exit;
+//     }
+// }
+// add_action('init', 'redirect_backend_to_wp_login');
 
 
 
@@ -499,31 +499,31 @@ add_action('init', 'redirect_backend_to_wp_login');
 |
 */
 
-function exclude_user_kevin_from_users_list($query) {
-    if (!is_admin()) {
-        return; // We voeren deze actie alleen uit in de backend
-    }
+// function exclude_user_kevin_from_users_list($query) {
+//     if (!is_admin()) {
+//         return; // We voeren deze actie alleen uit in de backend
+//     }
 
-    $current_user = wp_get_current_user();
+//     $current_user = wp_get_current_user();
 
-    // Controleer of de huidige gebruiker "super admin" is
-    if ($current_user->user_login === 'kevin') {
-        return; // "super admin" kan zijn eigen gebruikersgegevens zien
-    }
+//     // Controleer of de huidige gebruiker "super admin" is
+//     if ($current_user->user_login === 'kevin') {
+//         return; // "super admin" kan zijn eigen gebruikersgegevens zien
+//     }
 
-    // Haal de huidige gebruiker op
-    $current_user_id = $current_user->ID;
+//     // Haal de huidige gebruiker op
+//     $current_user_id = $current_user->ID;
 
-    // Haal de gebruiker "super admin" op
-    $kevin_user = get_user_by('login', 'kevin');
+//     // Haal de gebruiker "super admin" op
+//     $kevin_user = get_user_by('login', 'kevin');
 
-    // Controleer of "super admin" bestaat en niet dezelfde is als de huidige gebruiker
-    if ($kevin_user && $current_user_id !== $kevin_user->ID) {
-        // Voeg een voorwaarde toe aan de gebruikersquery om "super admin" te verbergen voor andere gebruikers
-        $query->query_vars['exclude'] = array($kevin_user->ID);
-    }
-}
-add_action('pre_get_users', 'exclude_user_kevin_from_users_list');
+//     // Controleer of "super admin" bestaat en niet dezelfde is als de huidige gebruiker
+//     if ($kevin_user && $current_user_id !== $kevin_user->ID) {
+//         // Voeg een voorwaarde toe aan de gebruikersquery om "super admin" te verbergen voor andere gebruikers
+//         $query->query_vars['exclude'] = array($kevin_user->ID);
+//     }
+// }
+// add_action('pre_get_users', 'exclude_user_kevin_from_users_list');
 
 
 
@@ -538,23 +538,23 @@ add_action('pre_get_users', 'exclude_user_kevin_from_users_list');
 */
 
 
-function verwijder_auteur_en_reacties_kolommen($columns) {
-    // Controleer of de 'auteur' kolom aanwezig is in de array van kolommen
-    if (isset($columns['author'])) {
-        // Verwijder de 'auteur' kolom uit de array
-        unset($columns['author']);
-    }
+// function verwijder_auteur_en_reacties_kolommen($columns) {
+//     // Controleer of de 'auteur' kolom aanwezig is in de array van kolommen
+//     if (isset($columns['author'])) {
+//         // Verwijder de 'auteur' kolom uit de array
+//         unset($columns['author']);
+//     }
 
-    // Controleer of de 'reacties' kolom aanwezig is in de array van kolommen
-    if (isset($columns['comments'])) {
-        // Verwijder de 'reacties' kolom uit de array
-        unset($columns['comments']);
-    }
+//     // Controleer of de 'reacties' kolom aanwezig is in de array van kolommen
+//     if (isset($columns['comments'])) {
+//         // Verwijder de 'reacties' kolom uit de array
+//         unset($columns['comments']);
+//     }
 
-    return $columns;
-}
-add_filter('manage_posts_columns', 'verwijder_auteur_en_reacties_kolommen');
-add_filter('manage_pages_columns', 'verwijder_auteur_en_reacties_kolommen');
+//     return $columns;
+// }
+// add_filter('manage_posts_columns', 'verwijder_auteur_en_reacties_kolommen');
+// add_filter('manage_pages_columns', 'verwijder_auteur_en_reacties_kolommen');
 
 
 

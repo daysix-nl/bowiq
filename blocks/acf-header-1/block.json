@@ -1,9 +1,9 @@
 {
-  "name": "acf-nieuws-slider-1",
-  "title": "Nieuws slider 1",
+  "name": "acf-header-1",
+  "title": "Header 1",
   "description": "",
   "category": "bibliotheek",
-  "icon": "slides",
+  "icon": "align-full-width",
   "keywords": [
     "block"
   ],
@@ -13,7 +13,7 @@
   },
   "acf": {
     "mode": "preview",
-    "renderTemplate": "acf-nieuws-slider-1.php"
+    "renderTemplate": "acf-header-1.php"
   },
   "example": {
     "attributes": {
