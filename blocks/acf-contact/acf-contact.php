@@ -38,7 +38,7 @@ $image1_alt = isset($image1['alt']) ? esc_attr($image1['alt']) : '';
                     endif;
                     ?>
                 </div>
-                <div class="col-span-1 lg:col-span-2 bg-white px-[30px] py-[45px]>
+                <div class="col-span-1 lg:col-span-2 bg-white px-[30px] py-[45px]">
                     <h3 class="text-28 leading-30 text-[#6d5959] font-medium mb-[30px]"><?php echo get_field('title_block_2');?></h3>
                     <div class="formulier">
                         <?php echo do_shortcode('[gravityform id="1" title="false"]'); ?>
