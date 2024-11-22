@@ -4,9 +4,9 @@ if (isset($block['data']['preview_image_help'])): ?>
     <?php
 else: ?>
 <?php
-$image = get_field('image');
-$image_url = isset($image['url']) ? esc_url($image['url']) : '';
-$image_alt = isset($image['alt']) ? esc_attr($image['alt']) : '';
+$image1 = get_field('image');
+$image1_url = isset($image1['url']) ? esc_url($image1['url']) : '';
+$image1_alt = isset($image1['alt']) ? esc_attr($image1['alt']) : '';
 ?>
 <!-- CONTACT -->
  <section class=" w-full">
