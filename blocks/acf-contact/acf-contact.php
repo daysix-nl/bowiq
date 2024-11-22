@@ -14,7 +14,7 @@ $image1_alt = isset($image1['alt']) ? esc_attr($image1['alt']) : '';
         <div class="container pt-[60px] pb-[1x] relative z-[6] bg-[#e7e2dd]">
             <h2 class="text-32 leading-40 text-[#6d5959] font-medium mb-[30px]"><?php echo get_field('title');?></h2>
             <div class="w-full grid grid-cols-1 lg:grid-cols-3 gap-[2px] rounded-t-[6px] overflow-hidden">
-                <div class="col-span-1 bg-white p-[30px]">
+                <div class="col-span-1 bg-white px-[30px] py-[45px]">
                     <h3 class="text-28 leading-30 text-[#6d5959] font-medium mb-[30px]"><?php echo get_field('title_block_1');?></h3>
                     <?php
                     if( have_rows('specialists') ):
@@ -38,7 +38,7 @@ $image1_alt = isset($image1['alt']) ? esc_attr($image1['alt']) : '';
                     endif;
                     ?>
                 </div>
-                <div class="col-span-1 lg:col-span-2 bg-white p-[30px]">
+                <div class="col-span-1 lg:col-span-2 bg-white px-[30px] py-[45px]>
                     <h3 class="text-28 leading-30 text-[#6d5959] font-medium mb-[30px]"><?php echo get_field('title_block_2');?></h3>
                     <div class="formulier">
                         <?php echo do_shortcode('[gravityform id="1" title="false"]'); ?>
@@ -51,19 +51,19 @@ $image1_alt = isset($image1['alt']) ? esc_attr($image1['alt']) : '';
         <div class="container relative z-[6]">
             <div class="bg-[#e7e2dd] pt-[1px] rounded-b-[6px] overflow-hidden">
                 <div class="w-full grid grid-cols-1 lg:grid-cols-3 gap-[2px]">
-                    <div class="col-span-1 bg-white p-[30px]">
+                    <div class="col-span-1 bg-white px-[30px] py-[45px]">
                         <h3 class="text-28 leading-30 text-[#6d5959] font-medium mb-[30px]"><?php echo get_field('title_block_3');?></h3>
                         <div class="text-16 leading-26 font-normal text-editor">
                             <?php echo get_field('text_block_3');?>
                         </div>
                     </div>
-                    <div class="col-span-1 bg-white p-[30px]">
+                    <div class="col-span-1 bg-white p-[30px] px-[30px] py-[45px]">
                         <h3 class="text-28 leading-30 text-[#6d5959] font-medium mb-[30px]"><?php echo get_field('title_block_4');?></h3>
                         <div class="text-16 leading-26 font-normal text-editor">
                             <?php echo get_field('text_block_4');?>
                         </div>
                     </div>
-                    <div class="col-span-1 bg-white p-[30px]">
+                    <div class="col-span-1 bg-white p-[30px] px-[30px] py-[45px]">
                         <h3 class="text-28 leading-30 text-[#6d5959] font-medium mb-[30px]"><?php echo get_field('title_block_5');?></h3>
                         <div class="text-16 leading-26 font-normal text-editor">
                            <?php echo get_field('text_block_5');?>
