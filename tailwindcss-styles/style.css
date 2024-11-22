@@ -801,13 +801,9 @@ video {
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
-.rounded-b-\[6px\] {
-  border-bottom-right-radius: 6px;
-  border-bottom-left-radius: 6px;
-}
-.rounded-t-\[6px\] {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+.rounded-t-\[20px\] {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .border-\[1px\] {
   border-width: 1px;
