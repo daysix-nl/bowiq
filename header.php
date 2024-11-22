@@ -30,7 +30,7 @@
             </div>
             <div class="h-[40px] w-[150px] lg:hidden"></div>
             <a href="/" class="h-[55px] flex justify-center items-center">
-                <img src="/wp-content/themes/bowiq/img/local/logov2.png" alt="" class="h-full w-full">
+                <img src="/wp-content/themes/bowiq/img/local/logov2.png" alt="" class="h-full w-auto">
             </a>
             <div class="h-[40px] w-[150px]"></div>
 
